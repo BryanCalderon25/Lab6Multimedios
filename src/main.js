@@ -1,3 +1,4 @@
+console.log("MAIN CARGADO");
 import { agregarTarea } from "./modules/task.js";
 import { render } from "./modules/ui.js";
 
@@ -12,7 +13,7 @@ function validarTarea(texto) {
 }
 
 function handleAgregar() {
-  const texto = txtTarea.value;
+  const texto = txtTarea.value.trim();
 
   if (!validarTarea(texto)) {
     mensaje.textContent = "Debe ingresar una tarea válida";
@@ -35,5 +36,5 @@ txtTarea.addEventListener("keydown", (e) => {
   }
 });
 
-// Render inicial
+// 🔥 CLAVE: carga datos guardados
 render(lista, contador);

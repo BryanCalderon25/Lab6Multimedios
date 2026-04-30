@@ -1,3 +1,4 @@
+console.log("TASK CARGADO");
 import { guardarTareas, obtenerTareas } from "./storage.js";
 
 let tareas = obtenerTareas();
